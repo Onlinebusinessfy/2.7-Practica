@@ -1,0 +1,47 @@
+h1 {
+    text-align: center;
+    color: #2457a7;
+    margin-top: 25px;
+}
+
+.descripcion {
+    text-align: center;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.contenedor {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 18px;
+    padding: 20px;
+}
+
+.tarjeta {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 18px;
+    box-shadow: 0 3px 8px #00000012;
+}
+
+.tarjeta h2 {
+    color: #2457a7;
+    font-size: 19px;
+}
+
+.tarjeta p {
+    color: #444;
+    overflow-wrap: anywhere;
+}
+
+.mensaje {
+    text-align: center;
+    color: #2457a7;
+}
+
+.error {
+    text-align: center;
+    color: red;
+    font-weight: bold;
+}

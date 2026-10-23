@@ -1,0 +1,24 @@
+<h1>Catálogo de usuarios</h1>
+<p class="descripcion">Usuarios obtenidos desde una API externa</p>
+
+@if (cargando) {
+<p class="mensaje">Cargando usuarios...</p>
+}
+
+@if (error) {
+<p class="error">{{ error }}</p>
+}
+
+@if (!cargando && !error) {
+<div class="contenedor">
+    @for (usuario of usuarios; track usuario.id) {
+    <div class="tarjeta">
+        <h2>{{ usuario.name }}</h2>
+        <p><strong>ID:</strong> {{ usuario.id }}</p>
+        <p><strong>Correo:</strong> {{ usuario.email }}</p>
+    </div>
+    } @empty {
+    <p>No hay usuarios disponibles.</p>
+    }
+</div>
+}
